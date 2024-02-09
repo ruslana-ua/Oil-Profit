@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,700&display=swap);
+
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+:focus,
+:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #151515;
+  line-height: 1;
+  font-family: "Roboto";
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 74.375rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.page-thanks {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 0;
+}
+
+.page-thanks__wrapper {
+  width: 540px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-thanks__image {
+  margin-bottom: 30px;
+}
+
+.page-thanks__image img {
+  max-width: 280px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-thanks__title {
+  margin-bottom: 30px;
+}
+
+.page-thanks__link {
+  margin: 3rem auto 0px auto;
+  border-radius: 7px;
+  background-color: #0bb5d3;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none !important;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  min-height: 68px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.page-thanks__link::after {
+  content: "»";
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 0.5;
+  position: relative;
+  top: -3px;
+}
+
+.page-thanks__link:hover {
+  -webkit-box-shadow: 0 2px 7.2px 1.8px rgba(11, 181, 211, 0.31);
+          box-shadow: 0 2px 7.2px 1.8px rgba(11, 181, 211, 0.31);
+}
+
+@media (max-width: 47.99875em) {
+  h3 {
+    font-size: 28px;
+    line-height: 1.1428571429;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .page-thanks {
+    padding: 30px 0;
+  }
+
+  .page-thanks__wrapper {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  .page-thanks__image {
+    padding-bottom: 15px;
+  }
+
+  .page-thanks__image img {
+    max-width: 220px;
+  }
+
+  .page-thanks__title {
+    margin-bottom: 15px;
+  }
+
+  .page-thanks__link {
+    margin: 1rem auto 0px auto;
+    font-size: 19px;
+    min-width: 45px;
+  }
+
+  .page-thanks__link::after {
+    font-size: 24px;
+    top: -1px;
+  }
+}
